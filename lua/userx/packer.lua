@@ -81,4 +81,32 @@ return require('packer').startup(function(use)
       'raimondi/delimitmate'
   }
 
+  -- Install Nerd Fonts to get devicons and add it to the terminal font.
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+	  },
+  }
+ 
+  use {
+	  'numToStr/Comment.nvim', 
+  }
+
+  use {
+	  'windwp/nvim-ts-autotag',
+	  requires = {
+			'windwp/nvim-ts-autotag'
+	  }
+  }
+
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
+
+  use{
+	  'lukas-reineke/indent-blankline.nvim'
+  }
+
 end)
